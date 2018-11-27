@@ -1,0 +1,20 @@
+.menu_options{
+    float: left; 
+    background: palevioletred;
+}
+
+.item_display{
+    display:inline-block; 
+    background: rebeccapurple;
+}
+
+.total_order{
+    float: right;
+    background: cornflowerblue;
+}
+
+.fooditem{
+    border: 2px solid palevioletred;
+    padding: 15px 32px;
+    background-color: aquamarine;
+}
