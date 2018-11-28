@@ -1,20 +1,58 @@
-.menu_options{
-    float: left; 
-    background: palevioletred;
+/* https://matthewjamestaylor.com/blog/equal-height-columns-3-column.htm */
+#container3 {
+	clear:left;
+	float:left;
+	width:100%;
+	overflow:hidden;
+	background: cornflowerblue; /* column 3 background colour */
+}
+#container2 {
+	clear:left;
+	float:left;
+	width:100%;
+	position:relative;
+	right:33.333%;
+    background: rebeccapurple; /* column 2 background colour */
+}
+#container1 {
+	float:left;
+	width:100%;
+	position:relative;
+	right:33.33%;
+    background: palevioletred; /* column 1 background colour */
 }
 
-.item_display{
-    display:inline-block; 
-    background: rebeccapurple;
+#menu_options{
+	float:left;
+	width:29.33%;
+	position:relative;
+	left:68.67%;
+	overflow:hidden;
 }
 
-.total_order{
-    float: right;
-    background: cornflowerblue;
+#item_display{
+    float:left;
+	width:29.33%;
+	position:relative;
+	left:72.67%;
+	overflow:hidden;
+}
+
+#total_order{
+	float:left;
+	width:29.33%;
+	position:relative;
+	left:76.67%;
+	overflow:hidden;
 }
 
 .fooditem{
     border: 2px solid palevioletred;
-    padding: 15px 32px;
+    width: 100%;
+    padding: 5px;
     background-color: aquamarine;
+}
+
+.row {
+    text-align:center;
 }
