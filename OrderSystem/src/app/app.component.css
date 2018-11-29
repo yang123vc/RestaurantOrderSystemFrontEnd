@@ -56,3 +56,8 @@
 .row {
     text-align:center;
 }
+
+.ItemDisplayButton {
+	position: absolute;
+	bottom: 0;
+}
