@@ -12,14 +12,15 @@
 	width:100%;
 	position:relative;
 	right:33.333%;
-    background: rebeccapurple; /* column 2 background colour */
+	background: rebeccapurple; /* column 2 background colour */
 }
 #container1 {
 	float:left;
 	width:100%;
 	position:relative;
 	right:33.33%;
-    background: palevioletred; /* column 1 background colour */
+	background: palevioletred; /* column 1 background colour */
+	padding: 10px;
 }
 
 #menu_options{
@@ -28,6 +29,7 @@
 	position:relative;
 	left:68.67%;
 	overflow:hidden;
+	text-align: center;
 }
 
 #item_display{
@@ -55,4 +57,8 @@
 
 .row {
     text-align:center;
+}
+
+#default {
+	text-align: center;
 }
