@@ -1,3 +1,4 @@
+<html>
 <body>
 <div style="text-align:center">
    <h1>
@@ -134,34 +135,34 @@
             <br>
             <div id = "itemprice" class = "row">
                <div *ngIf ="whichFood==1">
-                  4.00
+                  $4.00
                 </div>
                 <div *ngIf ="whichFood==2">
-                  6.00
+                  $6.00
                 </div>
                 <div *ngIf ="whichFood==3">
-                  3.50
+                  $3.50
                 </div>
                 <div *ngIf ="whichFood==4">
-                  2.50
+                  $2.50
                 </div>
                 <div *ngIf ="whichFood==5">
-                  3.00
+                  $3.00
                 </div>
                 <div *ngIf ="whichFood==6">
-                  6.66
+                  $6.66
                </div>
                <div *ngIf ="whichFood==7">
-                  2.50
+                  $2.50
                </div>
                <div *ngIf ="whichFood==8">
-                  1.50
+                  $1.50
                </div>
                <div *ngIf ="whichFood==9">
-                  10.00
+                  $10.00
                </div>
                <div *ngIf ="whichFood==10">
-                  2.00
+                  $2.00
                </div>
                <div id = "default" *ngIf ="whichFood==11">
                   
@@ -206,93 +207,111 @@
             <br>
             <div id = "ordButts" class = "row">
                 <form *ngIf ="whichFood==1">
-                  Quantity: <input #quantity1 min = '1' id = "quantity" type="number"(keyup.enter)="formSubmitted(quantity.value)" />
-                  <button (click)="formSubmitted(quantity1.value, 'Okay Chicken Tenders')">
-                     Add to Order
+                  Quantity: <input #quantity1 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted1(quantity1.value)" />
+                  <button (click)="formSubmitted1(quantity1.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==2">
-                  Quantity: <input #quantity2 min = '1' id = "quantity" type="number"(keyup.enter)="formSubmitted(quantity.value)" />
-                  <button (click)="formSubmitted(quantity2.value, 'Slightly Dry Burger')">
-                     Add to Order
+                  Quantity: <input #quantity2 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted2(quantity2.value)" />
+                  <button (click)="formSubmitted2(quantity2.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==3">
-                  Quantity: <input #quantity3 min = '1' id = "quantity" type="number" />
-                  <button (click)="formSubmitted(quantity3.value, 'E.Coli-Free Salad')">
-                     Add to Order
+                  Quantity: <input #quantity3 min = '0' value = '0'  default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted3(quantity3.value)"/>
+                  <button (click)="formSubmitted3(quantity3.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==4">
-                  Quantity: <input #quantity4 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity4.value, 'Slightly Soggy Fries')">
-                     Add to Order
+                  Quantity: <input #quantity4 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted4(quantity4.value)"/>
+                  <button (click)="formSubmitted4(quantity4.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==5">
-                  Quantity: <input #quantity5 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity5.value, 'Mac n... More Mac (dairy free)')">
-                     Add to Order
+                  Quantity: <input #quantity5 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted5(quantity5.value)"/>
+                  <button (click)="formSubmitted5(quantity5.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==6">
-                  Quantity: <input #quantity6 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity6.value, 'Food Item 6')">
-                     Add to Order
+                  Quantity: <input #quantity6 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted6(quantity6.value)"/>
+                  <button (click)="formSubmitted6(quantity6.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                </form>  
                 <form *ngIf ="whichFood==7">
-                  Quantity: <input #quantity7 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity7.value, 'Grilled Cheese')">
-                     Add to Order
+                  Quantity: <input #quantity7 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted7(quantity7.value)"/>
+                  <button (click)="formSubmitted7(quantity7.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==8">
-                  Quantity: <input #quantity8 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity8.value, 'Recycled and Reused Grilled Crusts')">
-                     Add to Order
+                  Quantity: <input #quantity8 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted8(quantity8.value)"/>
+                  <button (click)="formSubmitted8(quantity8.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==9">
-                  Quantity: <input #quantity9 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity9.value, 'Really Greasy Pizza')">
-                     Add to Order
+                  Quantity: <input #quantity9 min = '0' value = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted9(quantity9.value)"/>
+                  <button (click)="formSubmitted9(quantity9.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==10">
-                  Quantity: <input #quantity10 min = '1' id = "quantity" type="number"/>
-                  <button (click)="formSubmitted(quantity10.value, 'Room Temp Water')">
-                     Add to Order
+                  Quantity: <input #quantity10 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted10(quantity10.value)"/>
+                  <button (click)="formSubmitted10(quantity10.value)">
+                     Update Quantity
                   </button>
                   <br>
-                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==11"></form>
             </div>
          </div>
          <div id= "total_order">
             <h2>Total Order</h2>
-
+               <ol>
+                  <li>{{formSubmitMessage1}}</li>
+                  <li>{{formSubmitMessage2}}</li>
+                  <li>{{formSubmitMessage3}}</li>
+                  <li>{{formSubmitMessage4}}</li>
+                  <li>{{formSubmitMessage5}}</li>
+                  <li>{{formSubmitMessage6}}</li>
+                  <li>{{formSubmitMessage7}}</li>
+                  <li>{{formSubmitMessage8}}</li>
+                  <li>{{formSubmitMessage9}}</li>
+                  <li>{{formSubmitMessage10}}</li>
+               </ol>
+               <div>
+                  <h4> Untaxed Total Price: {{sumString}}</h4>
+                  <h4> Tax: {{taxString}} </h4>
+                  <h2>Total Price is {{orderPrice}}</h2>
+                  <h4> Click New Order to start over, or click Done to submit your order.</h4>
+                  <button (click)="submit()">
+                     Done
+                  </button>
+                  <br>
+                  <label>{{submitOrderMessage}}</label> 
+                  <br>
+                  <br>
+                  <button (click) = "refresh()">
+                     New Order
+                  </button>
+               </div>
          </div>
       </div>
    </div>
 </div>
 </body>
+</html>
