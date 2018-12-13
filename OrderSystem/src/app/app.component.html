@@ -1,3 +1,4 @@
+<body>
 <div style="text-align:center">
    <h1>
       Welcome to {{ title }}!
@@ -204,72 +205,94 @@
             </div>
             <br>
             <div id = "ordButts" class = "row">
-                <div *ngIf ="whichFood==1">
-                  Quantity: <input #quantity min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <button (click) = "addNewProduct(4.00, 'Okay Chicken Tenders')">Add to Order</button>
+                <form *ngIf ="whichFood==1">
+                  Quantity: <input #quantity1 min = '1' id = "quantity" type="number"(keyup.enter)="formSubmitted(quantity.value)" />
+                  <button (click)="formSubmitted(quantity1.value, 'Okay Chicken Tenders')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
-                </div>  
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
+                </form>  
                 <form *ngIf ="whichFood==2">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" (click) = "addNewProduct(6.00, 'Slightly Dry Burger')" value="Add to Order">
+                  Quantity: <input #quantity2 min = '1' id = "quantity" type="number"(keyup.enter)="formSubmitted(quantity.value)" />
+                  <button (click)="formSubmitted(quantity2.value, 'Slightly Dry Burger')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> >
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==3">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" (click)="addNewProduct(3.50, 'E-Coli Free Salad')" value="Add to Order">
+                  Quantity: <input #quantity3 min = '1' id = "quantity" type="number" />
+                  <button (click)="formSubmitted(quantity3.value, 'E.Coli-Free Salad')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==4">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity4 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity4.value, 'Slightly Soggy Fries')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==5">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity5 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity5.value, 'Mac n... More Mac (dairy free)')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==6">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity6 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity6.value, 'Food Item 6')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                </form>  
                 <form *ngIf ="whichFood==7">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity7 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity7.value, 'Grilled Cheese')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==8">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity8 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity8.value, 'Recycled and Reused Grilled Crusts')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==9">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity9 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity9.value, 'Really Greasy Pizza')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==10">
-                  Quantity: <input min = '1' id = "quantity" type="number" name="quantity" value = "quantity">
-                  <input type="submit" onclick = "return addNewProduct(4.00, 'Okay Chicken Tenders');" value="Add to Order">
+                  Quantity: <input #quantity10 min = '1' id = "quantity" type="number"/>
+                  <button (click)="formSubmitted(quantity10.value, 'Room Temp Water')">
+                     Add to Order
+                  </button>
                   <br>
-                  <label *ngIf = "productIdReturn"> Product added to database: {{productIdReturn}}</label> 
+                  <label *ngIf = formSubmitMessage> {{formSubmitMessage}} </label>
                 </form>  
                 <form *ngIf ="whichFood==11"></form>
             </div>
          </div>
          <div id= "total_order">
             <h2>Total Order</h2>
+
          </div>
       </div>
    </div>
 </div>
+</body>
