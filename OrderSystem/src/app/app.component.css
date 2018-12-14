@@ -2,9 +2,11 @@
 #container3 {
 	clear:left;
 	float:left;
-	width:100%;
+	width:99.5%;
 	overflow:hidden;
 	background: white; /* column 3 background colour */
+	outline:10px solid rgb(240, 240, 240);
+	border:2px solid rgb(220, 220, 220);
 
 }
 #container2 {
@@ -21,7 +23,6 @@
 	position:relative;
 	right:33.33%;
 	background: white; /* column 1 background colour */
-	padding: 10px;
 }
 
 .radButt {
