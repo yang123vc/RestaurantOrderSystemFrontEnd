@@ -1,4 +1,7 @@
 <html>
+   <head>
+         <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+   </head>
 <body>
 <div style="text-align:center">
    <h1>
@@ -9,40 +12,42 @@
 <div id="container3" ng-app = "">
    <div id="container2">
       <div id="container1">
+         <br>
          <div id="menu_options">
             <h2>Menu</h2>
             <form>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 1 >Okay Chicken Tenders
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 1 >Okay Chicken Tenders
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 2 >Slightly Dry Burger
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 2 >Slightly Dry Burger
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 3 >E.Coli-Free Salad
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 3 >E.Coli-Free Salad
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 4 >Slightly Soggy Fries
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 4 >Slightly Soggy Fries
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 5 >Mac n... More Mac (dairy free)
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 5 >Mac n... More Mac (dairy free)
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 6 >Food Item 6
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 6 >Food Item 6
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 7 >Grilled Cheese
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 7 >Grilled Cheese
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 8 >Recycled and Reused Grilled Crusts
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 8 >Recycled and Reused Grilled Crusts
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 9 >Really Greasy Pizza
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 9 >Really Greasy Pizza
                </div>
                <div class="row">
-                  <input type= "radio" name = "whichFood" [(ngModel)]="whichFood" [value] = 10 >Room Temp Water
+                  <input type= "radio" class = "radButt"  name = "whichFood" [(ngModel)]="whichFood" [value] = 10 >Room Temp Water
                </div>
             </form>
+            <br>
          </div>
          <div id= "item_display">
             <div id = "itemTitle" class = "row">
@@ -186,7 +191,7 @@
                   This macaroni dish is free of cheese -- Vegan friendly!
                 </div>
                 <div *ngIf ="whichFood==6">
-                  All we know is that it’s 6.66
+                  All we know is that it’s $6.66
                </div>
                <div *ngIf ="whichFood==7">
                   One slice of bread and cheese makes the perfect bread-to-cheese ratio!
@@ -206,72 +211,72 @@
             </div>
             <br>
             <div id = "ordButts" class = "row">
-                <form *ngIf ="whichFood==1">
-                  Quantity: <input #quantity1 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted1(quantity1.value)" />
-                  <button (click)="formSubmitted1(quantity1.value)">
+                <form class = "updateForm" *ngIf ="whichFood==1">
+                  Quantity: <input #quantity1 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted1(quantity1.value)" />
+                  <button class = "updateButt" (click)="formSubmitted1(quantity1.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==2">
-                  Quantity: <input #quantity2 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted2(quantity2.value)" />
-                  <button (click)="formSubmitted2(quantity2.value)">
+                <form class = "updateForm" *ngIf ="whichFood==2">
+                  Quantity: <input #quantity2 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted2(quantity2.value)" />
+                  <button class = "updateButt" (click)="formSubmitted2(quantity2.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==3">
-                  Quantity: <input #quantity3 min = '0' value = '0'  default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted3(quantity3.value)"/>
-                  <button (click)="formSubmitted3(quantity3.value)">
+                <form class = "updateForm" *ngIf ="whichFood==3">
+                  Quantity: <input #quantity3 class = "updateIn" min = '0' value = '0'  default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted3(quantity3.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted3(quantity3.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==4">
-                  Quantity: <input #quantity4 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted4(quantity4.value)"/>
-                  <button (click)="formSubmitted4(quantity4.value)">
+                <form class = "updateForm" *ngIf ="whichFood==4">
+                  Quantity: <input #quantity4 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted4(quantity4.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted4(quantity4.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==5">
-                  Quantity: <input #quantity5 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted5(quantity5.value)"/>
-                  <button (click)="formSubmitted5(quantity5.value)">
+                <form class = "updateForm" *ngIf ="whichFood==5">
+                  Quantity: <input #quantity5 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted5(quantity5.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted5(quantity5.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==6">
-                  Quantity: <input #quantity6 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted6(quantity6.value)"/>
-                  <button (click)="formSubmitted6(quantity6.value)">
+                <form class = "updateForm" *ngIf ="whichFood==6">
+                  Quantity: <input #quantity6 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted6(quantity6.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted6(quantity6.value)">
                      Update Quantity
                   </button>
                   <br>
                </form>  
-                <form *ngIf ="whichFood==7">
-                  Quantity: <input #quantity7 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted7(quantity7.value)"/>
-                  <button (click)="formSubmitted7(quantity7.value)">
+                <form class = "updateForm" *ngIf ="whichFood==7">
+                  Quantity: <input #quantity7 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted7(quantity7.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted7(quantity7.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==8">
-                  Quantity: <input #quantity8 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted8(quantity8.value)"/>
-                  <button (click)="formSubmitted8(quantity8.value)">
+                <form class = "updateForm" *ngIf ="whichFood==8">
+                  Quantity: <input #quantity8 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted8(quantity8.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted8(quantity8.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==9">
-                  Quantity: <input #quantity9 min = '0' value = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted9(quantity9.value)"/>
-                  <button (click)="formSubmitted9(quantity9.value)">
+                <form class = "updateForm" *ngIf ="whichFood==9">
+                  Quantity: <input #quantity9 class = "updateIn" min = '0' value = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted9(quantity9.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted9(quantity9.value)">
                      Update Quantity
                   </button>
                   <br>
                 </form>  
-                <form *ngIf ="whichFood==10">
-                  Quantity: <input #quantity10 min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted10(quantity10.value)"/>
-                  <button (click)="formSubmitted10(quantity10.value)">
+                <form class = "updateForm" *ngIf ="whichFood==10">
+                  Quantity: <input #quantity10 class = "updateIn" min = '0' value = '0' default = '0' id = "quantity" type="number" (keyup.enter)="formSubmitted10(quantity10.value)"/>
+                  <button class = "updateButt" (click)="formSubmitted10(quantity10.value)">
                      Update Quantity
                   </button>
                   <br>
@@ -298,17 +303,18 @@
                   <h4> Tax: {{taxString}} </h4>
                   <h2>Total Price is {{orderPrice}}</h2>
                   <h4> Click New Order to start over, or click Done to submit your order.</h4>
-                  <button (click)="submit()">
+                  <button id = "doneButt" (click)="submit()">
                      Done
                   </button>
                   <br>
                   <label>{{submitOrderMessage}}</label> 
                   <br>
                   <br>
-                  <button (click) = "refresh()">
+                  <button id = "newButt" (click) = "refresh()">
                      New Order
                   </button>
                </div>
+               <br>
          </div>
       </div>
    </div>

@@ -4,7 +4,8 @@
 	float:left;
 	width:100%;
 	overflow:hidden;
-	background: cornflowerblue; /* column 3 background colour */
+	background: white; /* column 3 background colour */
+
 }
 #container2 {
 	clear:left;
@@ -12,15 +13,74 @@
 	width:100%;
 	position:relative;
 	right:33.333%;
-	background: rebeccapurple; /* column 2 background colour */
+	background: white; /* column 2 background colour */
 }
 #container1 {
 	float:left;
 	width:100%;
 	position:relative;
 	right:33.33%;
-	background: palevioletred; /* column 1 background colour */
+	background: white; /* column 1 background colour */
 	padding: 10px;
+}
+
+.radButt {
+	appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    outline: none;
+}
+.radButt:hover
+{
+     background-color: #f7f7f7;
+}
+
+.radButt:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+.radButt:checked
+{
+     background-color: #f1f1f1;
+}
+
+.updateForm {
+    background-color: #f1f1f1;
+	border-radius: 10px;
+}
+
+.updateIn {
+    background-color: white;
+	border-radius: 10px;
+}
+
+.updateButt {
+	background: white;
+    border-radius: 50px;
+}
+
+#doneButt {
+    background-color: #f1f1f1;
+	border-radius: 10px;
+}
+
+#newButt {
+    background-color: #f1f1f1;
+	border-radius: 10px;
 }
 
 #menu_options{
@@ -30,6 +90,11 @@
 	left:68.67%;
 	overflow:hidden;
 	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Open Sans', sans-serif;
 }
 
 #item_display{
@@ -38,6 +103,7 @@
 	position:relative;
 	left:72.67%;
 	overflow:hidden;
+	font-family: 'Lato', sans-serif;
 }
 
 #total_order{
@@ -46,18 +112,12 @@
 	position:relative;
 	left:76.67%;
 	overflow:hidden;
+	font-family: 'Lato', sans-serif;
 	text-align: center;
 }
 
-.fooditem{
-    border: 2px solid palevioletred;
-    width: 100%;
-    padding: 5px;
-    background-color: aquamarine;
-}
-
 .row {
-    text-align:center;
+	text-align:center;
 }
 
 #default {
